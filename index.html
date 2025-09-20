@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShantanuEdge - Premium YouTube Thumbnail Design</title>
+    <meta name="description" content="Professional YouTube thumbnail designs that grab attention and drive clicks. Elevate your channel with ShantanuEdge premium design studio.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg-1: #0a0a0a;
+            --dark-bg-2: #121212;
+            --electric-blue: #00F5FF;
+            --neon-green: #00FF9D;
+            --soft-purple: #A78BFA;
+            --accent-orange: #FF6B35;
+            --text-light: #FFFFFF;
+            --text-gray: #CCCCCC;
+            --text-dark: #888888;
+            --glass-bg: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --border-radius: 16px;
+            --section-spacing: 120px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg-1) 0%, var(--dark-bg-2) 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Improved Background Animation */
+        .background-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.12;
+            animation: float 25s infinite ease-in-out;
+            will-change: transform;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--electric-blue);
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 30s;
+        }
+
+        .circle-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--neon-green);
+            top: 60%;
+            right: 5%;
+            animation-delay: -10s;
+            animation-duration: 35s;
+        }
+
+        .circle-3 {
+            width: 320px;
+            height: 320px;
+            background: var(--soft-purple);
+            bottom: 15%;
+            left: 25%;
+            animation-delay: -20s;
+            animation-duration: 25s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+            33% {
+                transform: translate(40px, 50px) scale(1.05) rotate(120deg);
+            }
+            66% {
+                transform: translate(-30px, 40px) scale(1.03) rotate(240deg);
+            }
+        }
+
+        /* Particle Effect */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleFloat 20s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* Improved Section divider styling */
+        .section-divider {
+            height: 4px;
+            width: 120px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            margin: 25px auto 50px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--electric-blue);
+            animation: pulse 2s infinite;
+        }
+
+        .section-divider::before {
+            left: 25%;
+        }
+
+        .section-divider::after {
+            right: 25%;
+            background: var(--neon-green);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.4);
+            }
+        }
+
+        /* Enhanced Glassmorphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+            transition: var(--transition);
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 10px 40px rgba(0, 245, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Improved Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: translateY(-3px);
+        }
+
+        .logo img {
+            height: 55px;
+            width: auto;
+            margin-right: 15px;
+            border-radius: 10px;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            padding: 12px 22px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            font-size: 1.05rem;
+        }
+
+        .nav-links a:not(.cta-button)::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            transform: translateX(-100%);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .nav-links a:not(.cta-button):hover {
+            color: var(--electric-blue);
+        }
+
+        .nav-links a:not(.cta-button):hover::before {
+            transform: translateX(0);
+        }
+
+        .hamburger {
+            display: none;
+            width: 35px;
+            height: 35px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1001;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 3.5px 0;
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -7px);
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            padding: 140px 0 180px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--electric-blue), var(--neon-green), transparent);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.15;
+            animation: fadeInUp 1s ease;
+            text-shadow: 0 5px 15px rgba(0, 245, 255, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            max-width: 650px;
+            margin: 0 auto 50px;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 40px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            color: var(--dark-bg-1);
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-bottom: 60px;
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+            transition: var(--transition);
+            transform: translateY(0);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+            border: none;
+            cursor: pointer;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            transition: 0.7s;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.8);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .thumbnail-previews {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+            animation: fadeIn 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .thumbnail {
+            width: 320px;
+            height: 180px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: var(--transition);
+            animation: float-thumbnail 8s infinite ease-in-out;
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+            position: relative;
+        }
+
+        .thumbnail::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 245, 255, 0.15), rgba(0, 255, 157, 0.15));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 245, 255, 0.4);
+        }
+
+        .thumbnail:hover::after {
+            opacity: 1;
+        }
+
+        .thumbnail:nth-child(1) {
+            background-image: url('image9.png');
+            animation-delay: 0s;
+        }
+
+        .thumbnail:nth-child(2) {
+            background-image: url('image6.png');
+            animation-delay: -2s;
+        }
+
+        .thumbnail:nth-child(3) {
+            background-image: url('image4.png');
+            animation-delay: -4s;
+        }
+
+        .thumbnail:nth-child(4) {
+            background-image: url('image8.png');
+            animation-delay: -6s;
+        }
+
+        @keyframes float-thumbnail {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Enhanced Trust Badges */
+        .trust-badges {
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .trust-badges::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+        }
+
+        .trust-badges p {
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .platform-scroll-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 25px 0;
+        }
+
+        .platform-scroll-track {
+            display: flex;
+            width: 200%;
+            animation: scroll 25s linear infinite;
+            will-change: transform;
+        }
+
+        .platform-scroll-track:hover {
+            animation-play-state: paused;
+        }
+
+        .platform-logos {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .platform {
+            font-size: 3.5rem;
+            margin: 0 30px;
+            color: #555;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .platform span {
+            font-size: 1rem;
+            margin-top: 10px;
+            opacity: 0;
+            transition: var(--transition);
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .platform:hover {
+            color: var(--electric-blue);
+            transform: translateY(-8px);
+        }
+
+        .platform:hover span {
+            opacity: 1;
+        }
+
+        /* Enhanced Services */
+        .services {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--soft-purple), transparent);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            padding: 35px 30px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(0, 255, 157, 0.15));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: var(--border-radius);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.3) rotate(5deg);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .service-desc {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Enhanced Portfolio */
+        .portfolio {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+
+        .portfolio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--electric-blue), transparent);
+        }
+
+        /* Improved Masonry Grid Layout */
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 25px;
+        }
+
+        .portfolio-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 25px;
+            break-inside: avoid;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(45deg, #333, #555);
+            transform: translateZ(0);
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition-slow);
+            transform: translateZ(0);
+        }
+
+        .portfolio-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 35px;
+        }
+
+        .portfolio-item:hover .portfolio-item-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .view-project {
+            padding: 15px 30px;
+            background: var(--text-light);
+            color: var(--dark-bg-1);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+            transform: translateY(40px);
+            opacity: 0;
+            font-size: 1.1rem;
+        }
+
+        .portfolio-item:hover .view-project {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Enhanced Testimonials */
+        .testimonials {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+        }
+
+        .testimonial-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 25px 0;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+            will-change: transform;
+        }
+
+        .testimonial-card {
+            flex: 0 0 auto;
+            width: 420px;
+            margin-right: 25px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .testimonial-cards:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-445px * 3 - 25px * 3));
+            }
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .client-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--electric-blue), var(--neon-green));
+            margin-right: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .client-details h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .client-details p {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+        .stars {
+            color: gold;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-card p {
+            flex-grow: 1;
+            font-style: italic;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Enhanced FAQ */
+        .faq {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--soft-purple), transparent);
+        }
+
+        .accordion {
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 25px;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .accordion-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .accordion-header {
+            padding: 28px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            transition: var(--transition);
+            font-size: 1.15rem;
+        }
+
+        .accordion-header:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .accordion-content {
+            padding: 0 28px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            border-left: 1px solid var(--glass-border);
+            border-right: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            border-radius: 0 0 16px 16px;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+            padding: 28px;
+        }
+
+        /* Enhanced CTA Section */
+        .cta-section {
+            padding: var(--section-spacing) 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--electric-blue), transparent);
+        }
+
+        .cta-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+        }
+
+        .cta-section p {
+            color: var(--text-gray);
+            max-width: 650px;
+            margin: 0 auto 50px;
+            font-size: 1.2rem;
+        }
+
+        /* Enhanced Footer */
+        footer {
+            padding: 100px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+
+        .footer-brand .logo {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .footer-brand p {
+            color: var(--text-gray);
+            max-width: 400px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 18px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 45px;
+            height: 4px;
+            background: var(--electric-blue);
+        }
+
+        .footer-column a {
+            display: block;
+            color: var(--text-gray);
+            text-decoration: none;
+            margin-bottom: 18px;
+            transition: var(--transition);
+            position: relative;
+            padding-left: 0;
+            font-size: 1.1rem;
+        }
+
+        .footer-column a::before {
+            content: '›';
+            position: absolute;
+            left: -20px;
+            opacity: 0;
+            transition: var(--transition);
+            color: var(--electric-blue);
+            font-size: 1.3rem;
+        }
+
+        .footer-column a:hover {
+            color: var(--electric-blue);
+            padding-left: 25px;
+        }
+
+        .footer-column a:hover::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+
+        .social-icon:hover {
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            color: var(--dark-bg-1);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 245, 255, 0.4);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 70px;
+            color: var(--text-gray);
+            font-size: 1rem;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 50px;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 25px;
+            background: var(--glass-bg);
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-text {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Enhanced Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--electric-blue), var(--neon-green));
+            color: var(--dark-bg-1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.6);
+            font-size: 1.3rem;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(0, 245, 255, 0.8);
+        }
+
+        /* Modal for portfolio items */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-slow);
+        }
+
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            border-radius: 16px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--electric-blue);
+            transform: rotate(90deg);
+        }
+
+        /* Loading animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg-1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-spinner {
+            width: 70px;
+            height: 70px;
+            border: 6px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 6px solid var(--electric-blue);
+            animation: spin 1.2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 992px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+            
+            .masonry-grid {
+                column-count: 3;
+            }
+            
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 25px);
+            }
+            
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 85%;
+                max-width: 380px;
+                height: 100vh;
+                flex-direction: column;
+                padding: 120px 35px 35px;
+                transition: var(--transition);
+                z-index: 1000;
+                display: flex;
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                gap: 0;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                padding: 20px;
+                margin: 8px 0;
+                border-radius: 12px;
+                text-align: center;
+                border-bottom: 1px solid var(--glass-border);
+                font-size: 1.1rem;
+            }
+
+            .nav-links a:not(.cta-button):hover::before {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .masonry-grid {
+                column-count: 2;
+            }
+            
+            .testimonial-card {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                padding: 120px 0 150px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.3rem;
+            }
+            
+            .masonry-grid {
+                column-count: 1;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-column {
+                min-width: 100%;
+            }
+
+            .thumbnail {
+                width: 240px;
+                height: 135px;
+            }
+
+            .testimonial-card {
+                width: 320px;
+            }
+
+            .scroll-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .platform {
+                font-size: 2.5rem;
+                margin: 0 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .cta-button {
+                padding: 18px 35px;
+            }
+            
+            .thumbnail {
+                width: 200px;
+                height: 112px;
+            }
+            
+            .platform {
+                font-size: 2rem;
+            }
+            
+            .service-card {
+                padding: 30px 25px;
+            }
+            
+            .testimonial-card {
+                width: 300px;
+                padding: 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Performance optimizations */
+        .performance-optimized {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="background-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <!-- Particle Effect -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Portfolio Modal -->
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content">
+            <img src="" alt="Portfolio Item" id="modalImage">
+            <span class="close-modal" id="closeModal">&times;</span>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="image11.png" alt="ShantanuEdge Logo">
+                </a>
+                <div class="nav-links glass">
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact" class="cta-button">Contact Us</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Turn Scrollers Into Viewers — Instantly</h1>
+                <p>Professional YouTube thumbnail designs that grab attention and drive clicks. Elevate your channel with our premium design studio.</p>
+                <a href="#contact" class="cta-button">Get Started Now</a>
+                
+                <div class="thumbnail-previews">
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <p>Chosen by Creators Who've Grown Millions of Views</p>
+            <div class="platform-scroll-container">
+                <div class="platform-scroll-track">
+                    <div class="platform-logos">
+                        <div class="platform">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-twitch"></i>
+                            <span>Twitch</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless looping -->
+                    <div class="platform-logos">
+                        <div class="platform">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-twitch"></i>
+                            <span>Twitch</span>
+                        </div>
+                        <div class="platform">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+              <p class="section-subtitle"align="center">Premium thumbnail design solutions engineered to </p>
+                <p class="section-subtitle" align="center"> maximize click-through rates and viewer engagement</p>
+            <div class="section-divider"></div>
+            <div class="services-grid">
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="service-title">Thumbnail Design</h3>
+                    <p class="service-desc">Eye-catching thumbnails that increase your CTR and views with proven psychological principles.</p>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">Channel Branding</h3>
+                    <p class="service-desc">Consistent branding across your channel for immediate recognition and professional appearance.</p>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="service-title">Shorts Covers</h3>
+                    <p class="service-desc">Engaging covers for your YouTube Shorts content designed to stop the scroll.</p>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">CTR Optimization</h3>
+                    <p class="service-desc">Data-driven designs optimized for maximum click-through rate based on your niche analytics.</p>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3 class="service-title">Video Ads</h3>
+                    <p class="service-desc">Attention-grabbing thumbnails for your video advertisements that convert viewers to customers.</p>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="service-title">24hr Delivery</h3>
+                    <p class="service-desc">Quick turnaround without compromising on quality. Perfect for time-sensitive content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Premium Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Masterpiece Portfolio</h2>
+            <p class="section-subtitle"align="center">Explore our collection of premium thumbnail designs</p>
+                        <p class="section-subtitle" align="center"> that have driven exceptional results for our clients</p>
+            
+            <div class="masonry-grid">
+                <div class="portfolio-item" data-category="gaming">
+                    <img src="image5.jpg" alt="Gaming Thumbnail Design">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="view-project" data-image="image5.jpg">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="finance">
+                    <img src="image3.png" alt="Finance Thumbnail Design">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="view-project" data-image="image3.png">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="vlog">
+                    <img src="image1.png" alt="Vlog Thumbnail Design">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="view-project" data-image="image1.png">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="education">
+                    <img src="image7.png" alt="Education Thumbnail Design">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="view-project" data-image="image7.png">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="gaming">
+                    <img src="image2.png" alt="Gaming Thumbnail Design">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="view-project" data-image="image2.png">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="finance">
+                    <img src="image10.png" alt="Finance Thumbnail Design">
+                    <div class="portfolio-item-overlay">
+                        <a href="#" class="view-project" data-image="image10.png">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Success Stories</h2>
+             <p class="section-subtitle" align="center">Hear from content creators who have transformed </p> <p class="section-subtitle" align="center"> their channels with our premium thumbnail designs</p>
+            
+             <div class="section-divider"></div>
+        <div class="testimonial-wrapper">
+                <div class="testimonial-cards">
+                    <div class="testimonial-card glass">
+                        <div class="client-info">
+                            <div class="client-avatar">JD</div>
+                            <div class="client-details">
+                                <h4>John Doe</h4>
+                                <p>Finance channel</p>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"After switching to ShantanuEdge's thumbnails, my click-throughs skyrocketed by 45%. It feels like viewers can't resist clicking now!"</p>
+                    </div>
+                    
+                    <div class="testimonial-card glass">
+                        <div class="client-info">
+                            <div class="client-avatar">JS</div>
+                            <div class="client-details">
+                                <h4>Jane Smith</h4>
+                                <p>Documentary channel</p>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The designs are incredible and the delivery was super fast. My audience loves the new thumbnails and my CTR has improved significantly!"</p>
+                    </div>
+                    
+                    <div class="testimonial-card glass">
+                        <div class="client-info">
+                            <div class="client-avatar">MJ</div>
+                            <div class="client-details">
+                                <h4>Mike Johnson</h4>
+                                <p>Vlogging channel</p>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Professional service with amazing results. My views have increased by 30% since switching to ShantanuEdge. Worth every penny!"</p>
+                    </div>
+                    
+                    <div class="testimonial-card glass">
+                        <div class="client-info">
+                            <div class="client-avatar">RC</div>
+                            <div class="client-details">
+                                <h4>Ryan Carter</h4>
+                                <p>YouTube Coach</p>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Working with ShantanuEdge was a total game-changer. The thumbnails looked so polished that my videos finally stood out — and my students keep asking who does my designs!"</p>
+                    </div>
+                    
+                    <div class="testimonial-card glass">
+                        <div class="client-info">
+                            <div class="client-avatar">DR</div>
+                            <div class="client-details">
+                                <h4>David R</h4>
+                                <p>Fitness Creator</p>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I didn't expect such a quick turnaround AND designs this sharp. Posting them boosted my clicks right away, and even old subscribers messaged me saying the new look feels pro."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="section-divider"></div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        How long does it take to receive my thumbnails? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We offer 24-hour delivery for all standard thumbnail packages. Rush delivery options are also available for an additional fee if you need your thumbnails urgently.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What information do you need to create my thumbnails? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We'll need your video title, any specific elements you want included, your preferred style, brand colors if you have them, and any reference images for the overall look you're aiming for.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you offer revisions? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, we offer up to 2 rounds of revisions for each thumbnail to ensure you're completely satisfied with the final design. Our goal is your complete satisfaction.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can you match my existing channel branding? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Absolutely! We'll study your channel's existing style and create thumbnails that perfectly match your branding while still optimizing for click-through rate.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What formats do you deliver? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We deliver all thumbnails in high-resolution PNG format (1280x720 pixels), optimized for YouTube's specifications. Other formats available upon request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Let's Unlock Your Channel's Full Potential</h2>
+            <p>Secure your slot today and start publishing with thumbnails that drive views — not guesses.</p>
+            
+            <!-- Contact Information Section -->
+             <div class="social-icons">
+                        <a href="####" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/ShantanuEdge" class="social-icon" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="mailto:shantanuthakur837@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/+9779825351450" class="social-icon" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">ShantanuEdge</div>
+                    <p>Your videos deserve to be seen. We craft thumbnails that grab attention, spark curiosity, and turn casual viewers into loyal subscribers.</p>
+                    
+                  
+                  
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#">Thumbnail Design</a>
+                        <a href="#">Channel Branding</a>
+                        <a href="#">Shorts Covers</a>
+                        <a href="#">CTR Optimization</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#">Testimonials</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 ShantanuEdge. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loader after page load
+            setTimeout(function() {
+                document.getElementById('pageLoader').classList.add('hidden');
+            }, 1500);
+            
+            // Create particle effect
+            createParticles();
+            
+            // Mobile Navigation
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Close mobile nav when clicking on links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // FAQ Accordion
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    content.classList.toggle('active');
+                    
+                    const icon = header.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+            
+            // Portfolio Modal
+            const modal = document.getElementById('portfolioModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+            const viewProjectButtons = document.querySelectorAll('.view-project');
+            
+            viewProjectButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const imageSrc = button.getAttribute('data-image');
+                    modalImage.setAttribute('src', imageSrc);
+                    modal.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            closeModal.addEventListener('click', () => {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Scroll to top button
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Animate elements on scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card');
+                
+                elements.forEach(element => {
+                    const position = element.getBoundingClientRect();
+                    
+                    // If element is in viewport
+                    if(position.top < window.innerHeight - 100) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Initialize elements for animation
+            const animatedElements = document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card');
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(60px)';
+                element.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            // Trigger once on load
+            animateOnScroll();
+            
+            // Performance optimization - use requestAnimationFrame for animations
+            function optimizeAnimations() {
+                document.querySelectorAll('*').forEach(el => {
+                    const style = window.getComputedStyle(el);
+                    if (style.animation !== 'none 0s ease 0s 1 normal none running') {
+                        el.classList.add('performance-optimized');
+                    }
+                });
+            }
+            
+            // Initialize optimizations
+            optimizeAnimations();
+        });
+        
+        // Create particle effect function
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 40;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 6 + 2;
+                const posX = Math.random() * 100;
+                const delay = Math.random() * 20;
+                const duration = Math.random() * 15 + 20;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}vw`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+</html>
